@@ -4,11 +4,11 @@ var database;
 var height;
 
 function preload(){
-  balloon = loadImage("pro-C35 images/Hot Air Balloon-02.png");
-  balloon = loadImage("pro-C35 images/Hot Air Balloon-03.png");
-  balloon = loadImage("pro-C35 images/Hot Air Balloon-04.png");
+  balloon = loadImage("Hot Air Balloon-02.png");
+  balloon = loadImage("Hot Air Balloon-03.png");
+  balloon = loadImage("Hot Air Balloon-04.png");
 
-  backgroundImage = loadImage("pro-C35 images/Hot Air Balloon-01.png");
+  backgroundImage = loadImage("Hot Air Balloon-01.png");
 }
 
 function setup() {
@@ -24,7 +24,7 @@ function setup() {
 }
 
 function draw() {
-  background("pro-C35 images/Hot Air Balloon-01.png"); 
+  background(backgroundImage); 
   stroke();
   textSize();
   text("PRESS ARROW KEY EVENTS FOR PLAYING THIS GAME");
@@ -62,8 +62,8 @@ function readHeight(data){
 function showError(){
     console.log("Error in writing to the database");
 }
-function keyPressed(){
-    if(keyDOWN(UP_ARROW)){
+function keyPressed()
+   { if(keyDOWN(UP_ARROW)){
       ubdateHeight(0,-10);
       balloon,addAnimation("Hot Air Balloon-03.png",balloonImg2);
       balloon.scale=balloon.scale -0.01;
